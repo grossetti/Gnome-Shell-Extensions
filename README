@@ -2,3 +2,8 @@ Extensions for Gnome Shell. I currently support version 3.2. My current extensio
 
 RemovePanelAppMenu: this removes the menu that shows the current application's name; it sits next to the "Activities" button.
 
+To install the extensions:
+ - get it from GIT
+ - put the extension's directory (the one with the '@' in the name) in ~/.local/share/gnome-shell/extensions/
+ - restart the shell (Alt+F2 and type r then hit enter)
+ - enable it using gnome-tweak-tool
