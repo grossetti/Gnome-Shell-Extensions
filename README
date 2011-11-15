@@ -1,0 +1,4 @@
+Extensions for Gnome Shell. I currently support version 3.2. My current extensions are:
+
+RemovePanelAppMenu: this removes the menu that shows the current application's name; it sits next to the "Activities" button.
+
