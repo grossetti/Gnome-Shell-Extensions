@@ -3,13 +3,12 @@
  *       from the Panel
  * 
  * Author: Gabriel Rossetti
- * Date: 2011-11-15
- * Version: 1.0
+ * Date: 2011-12-08
+ * Version: 1.1
  */
 const Main = imports.ui.main;
 const Panel = Main.panel;
 
-var _enabled = false;
 
 /**
  * Initialize the extension
@@ -21,12 +20,9 @@ function init() {}
  */
 function enable() {
   
-  if(!_enabled) {
-    Panel._menus.removeMenu(Panel._appMenu.menu);
-    Panel._leftBox.remove_actor(Panel._appMenu.actor);
-    Panel._appMenu = null;
-    _enabled = true;
-  }
+  Panel._menus.removeMenu(Panel._appMenu.menu);
+  Panel._leftBox.remove_actor(Panel._appMenu.actor);
+  Panel._appMenu = null;
 }
 
 /**
@@ -34,10 +30,7 @@ function enable() {
  */
 function disable() {
   
-  if(_enabled) {
-    Panel._appMenu = new Main.Panel.AppMenuButton();
-    Panel._leftBox.add(Panel._appMenu.actor);
-    Panel._menus.addMenu(Panel._appMenu.menu);
-    _enabled = false;
-  }
+  Panel._appMenu = new Main.Panel.AppMenuButton();
+  Panel._leftBox.add(Panel._appMenu.actor);
+  Panel._menus.addMenu(Panel._appMenu.menu);
 }
