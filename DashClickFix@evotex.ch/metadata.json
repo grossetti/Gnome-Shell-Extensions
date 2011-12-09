@@ -1,0 +1,7 @@
+{
+  "shell-version": ["3.2"],
+  "uuid": "DashClickFix@evotex.ch",
+  "url" : "https://github.com/grossetti/Gnome-Shell-Extensions",
+  "name": "Dash Click Fix",
+  "description": "Fix the dash's behavior when you click on an already running icon. The default behaviour is to switch to it, this extension changes that to lanch a new instance instead"
+}
