@@ -6,13 +6,11 @@
  *       it if it is already running it always launches a new instance.
  * 
  * Author: Gabriel Rossetti
- * Date: 2011-12-08
- * Version: 1.0
+ * Date: 2012-05-03
+ * Version: 1.1
  */
 const Main = imports.ui.main;
 const AppDisplay = imports.ui.appDisplay;
-const Shell = imports.gi.Shell;
-const Clutter = imports.gi.Clutter;
 
 
 var _original = null;
@@ -24,6 +22,7 @@ var _original = null;
  * @param event the current event
  */
 function _onActivate(event) {
+  
   this.emit('launching');
 
   if (this._onActivateOverride) {
