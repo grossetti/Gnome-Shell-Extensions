@@ -3,8 +3,8 @@
  *       from the Panel
  * 
  * Author: Gabriel Rossetti
- * Date: 2012-05-08
- * Version: 1.3
+ * Date: 2012-05-09
+ * Version: 1.3.1
  */
 const Main = imports.ui.main;
 const Panel = Main.panel;
@@ -23,8 +23,10 @@ function init() {}
  */
 function enable() {
   
-  (new Gio.Settings({ schema: 'org.gnome.settings-daemon.plugins.xsettings' })).set_value('overrides', GLib.Variant.new('a{sv}', { 'Gtk/ShellShowsAppMenu': GLib.Variant.new('i', 0) }))
-  _menuManager = Panel._appMenu._menuManager
+  var value = GLib.Variant.new('a{sv}', { 'Gtk/ShellShowsAppMenu': GLib.Variant.new('i', 0) });
+  var xsetting = new Gio.Settings({ schema: 'org.gnome.settings-daemon.plugins.xsettings' });
+  xsetting.set_value('overrides', value);
+  _menuManager = Panel._appMenu._menuManager;
   Panel._menus.removeMenu(Panel._appMenu.menu);
   Panel._leftBox.remove_actor(Panel._appMenu.actor);
   Panel._appMenu = null;
@@ -39,5 +41,7 @@ function disable() {
   _menuManager = null;
   Panel._leftBox.add(Panel._appMenu.actor);
   Panel._menus.addMenu(Panel._appMenu.menu);
-  (new Gio.Settings({ schema: 'org.gnome.settings-daemon.plugins.xsettings' })).set_value('overrides', GLib.Variant.new('a{sv}', { 'Gtk/ShellShowsAppMenu': GLib.Variant.new('i', 1) }))
+  var value = GLib.Variant.new('a{sv}', { 'Gtk/ShellShowsAppMenu': GLib.Variant.new('i', 1) });
+  var xsetting = new Gio.Settings({ schema: 'org.gnome.settings-daemon.plugins.xsettings' });
+  xsetting.set_value('overrides', value);
 }
