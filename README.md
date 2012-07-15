@@ -3,15 +3,15 @@ Gnome-Shell-Extensions
 
 Extensions for the Gnome Shell.
 
-I currently support version 3.2.
+I currently support version 3.4
 
 My current extensions
 ---------------------
 
 -   **RemovePanelAppMenu** removes the menu that shows the current
     application's name; it sits next to the "Activities" button.
--   **DockClickFix** "fixes" the dash's default behavior when you click on an
-    icon.  
+-   **DockClickFix** "fixes" the dash's and overview search default behavior 
+    when you click on an icon.
     The default is to launch the app if none is running and to switch to the
     current instance if it is already running. This extension changes that to
     instead of switching to it if it is already running it always launches a new
