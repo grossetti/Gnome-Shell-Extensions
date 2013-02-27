@@ -1,7 +1,7 @@
 {
-  "shell-version": ["3.4"],
+  "shell-version": ["3.6"],
   "uuid": "RemovePanelAppMenu@evotex.ch",
-  "url" : "https://github.com/grossetti/Gnome-Shell-Extensions",
+  "url": "https://github.com/grossetti/Gnome-Shell-Extensions",
   "name": "Remove Panel App Menu",
   "description": "Remove the App Menu from the Panel"
 }
