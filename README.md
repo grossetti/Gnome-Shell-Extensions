@@ -26,8 +26,11 @@ Get it from GIT using
 
 Put the extensions' directories in ~/.local/share/gnome-shell/extensions/ using
 
-    ln -s `pwd`/DashClickFix@evotex.ch ~/.local/share/gnome-shell/extensions/DashClickFix@evotex.ch
-    ln -s `pwd`/RemovePanelAppMenu@evotex.ch ~/.local/share/gnome-shell/extensions/RemovePanelAppMenu@evotex.ch
+    ln -s `pwd`/Gnome-Shell-Extensions/DashClickFix@evotex.ch ~/.local/share/gnome-shell/extensions/DashClickFix@evotex.ch
+
+for DashClickFix. For RemovePanelAppMenu use
+
+    ln -s `pwd`/Gnome-Shell-Extensions/RemovePanelAppMenu@evotex.ch ~/.local/share/gnome-shell/extensions/RemovePanelAppMenu@evotex.ch
 
 Restart the gnome shell:
 
