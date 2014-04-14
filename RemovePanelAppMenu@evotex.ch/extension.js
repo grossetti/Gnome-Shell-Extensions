@@ -24,7 +24,8 @@ function enable() {
   let xsetting = new Gio.Settings({ schema: 'org.gnome.settings-daemon.plugins.xsettings' });
   xsetting.set_value('overrides', value);
   
-  Panel._leftBox.get_child_at_index(1).hide();
+  let appMenu = Panel.statusArea['appMenu'];
+  Panel._leftBox.remove_actor(appMenu.container);
 }
 
 /**
@@ -32,7 +33,8 @@ function enable() {
  */
 function disable() {
   
-  Panel._leftBox.get_child_at_index(1).show();
+  let appMenu = Panel.statusArea['appMenu'];
+  Panel._leftBox.remove_actor(appMenu.container);
   
   let value = GLib.Variant.new('a{sv}', { 'Gtk/ShellShowsAppMenu': GLib.Variant.new('i', 1) });
   let xsetting = new Gio.Settings({ schema: 'org.gnome.settings-daemon.plugins.xsettings' });
